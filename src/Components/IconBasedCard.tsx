@@ -103,8 +103,8 @@ const IconBasedCard = () => {
     };
 
     const closeDate: () => void = () => { // Explicitly define the return type as void
-        onCloseFirstModal(),
-            setSelectedDates(undefined);
+        onCloseFirstModal()
+        setSelectedDates(undefined);
     };
 
     useEffect(() => {
@@ -352,8 +352,8 @@ const IconBasedCard = () => {
                         <ModalBody>
                             <h1>Select your price range</h1>
                             <RangeSlider onChange={(value: any) => {
-                                dispatch(setPrice(`${value[0]}`)),
-                                    dispatch(setPriceTwo(`${value[1]}`))
+                                dispatch(setPrice(`${value[0]}`))
+                                dispatch(setPriceTwo(`${value[1]}`))
                             }} aria-label={['min', 'max']} min={0} max={1000} defaultValue={[200, 500]}>
                                 <RangeSliderTrack>
                                     <RangeSliderFilledTrack />

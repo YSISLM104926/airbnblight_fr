@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import airbnb from '../assets/airbnb.png'
 import { useState } from 'react'
-import { GlobeIcon, MenuIcon, User } from 'lucide-react'
+import { GlobeIcon, MenuIcon } from 'lucide-react'
 import { FaUserCircle } from 'react-icons/fa'
 const Navbar = () => {
     const [stays, setStays] = useState<boolean | null>(false);
