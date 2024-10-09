@@ -6,8 +6,15 @@ import Navbar from "@/Shared/Navbar";
 import { Skeleton, Spinner } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 
+type StateProps = {
+  price: {
+    price: string,
+    priceTwo: string
+  }
+}
+
 export default function Home() {
-  const price = useSelector((state: any) => state.price)
+  const price = useSelector((state: StateProps) => state.price)
   const { data: getPlaces, isLoading: isGetPlacesLoading } = useGetPlacesQuery(price);
   if (isGetPlacesLoading) {
     return <div className="flex justify-center items-center h-screen"><Spinner /></div>;
@@ -18,7 +25,7 @@ export default function Home() {
     <div>
       <Navbar />
       <div>
-        <IconBasedCard length={getPlaces.length as number} />
+        <IconBasedCard />
       </div>
       <Skeleton isLoaded={!isGetPlacesLoading}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">

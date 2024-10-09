@@ -64,10 +64,7 @@ function SamplePrevArrow(props: any) {
     );
 }
 
-interface IconBasedCardProps {
-    length: number; // Use the correct type instead of any
-}
-const IconBasedCard: React.FC<IconBasedCardProps> = ({ length }) => {
+const IconBasedCard = () => {
     const { isOpen: isOpenFirstModal, onOpen: onOpenFirstModal, onClose: onCloseFirstModal } = useDisclosure();
     const { isOpen: isOpenSecondModal, onOpen: onOpenSecondModal, onClose: onCloseSecondModal } = useDisclosure();
     const [option, setOption] = useState<string | null>('');

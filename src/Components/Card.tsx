@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({ place }) => {
                         className="mySwiper rounded-lg overflow-hidden"
                         modules={[Navigation, Pagination]}
                     >
-                        {loc.images.map((img: any, idx: number) => (
+                        {loc.images.map((img: string, idx: number) => (
                             <SwiperSlide key={idx}>
                                 <Image
                                     src={img}
